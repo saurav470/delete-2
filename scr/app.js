@@ -2,7 +2,7 @@ const express=require("express");
 const app=express();
 const path=require("path")
 const hbs=require("hbs");
-const port=process.env.port ||8000;
+const port=process.env.port||8000;
 //static path
 const staticPath=path.join(__dirname,"../public")
 const templatePath=path.join(__dirname,"../public/views")
@@ -32,7 +32,7 @@ app.get("/*",(req,res)=>{
     res.render("404")
 })
 
-app.listen(port,"127.0.0.1",()=>{
+app.listen(port,()=>{
     console.log(`listen on port ${port}`);
 })
     
