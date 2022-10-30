@@ -1,0 +1,24 @@
+{{>head}}
+<script defer src="../js/main.js"></script>
+
+<body class="weather-body">
+    <div class="container1">
+        {{>navbar}}
+        {{!-- temperature info section --}}
+        <section class="sec-temp">
+            <div class="tempInfo">
+                <form action="" class="temp-form">
+                    <input type="text" id="cityName" placeholder="Enter city name" autocomplete="off">
+                    <input type="submit" value="Search" id="submitBtn">
+                </form>
+                <div class="date-time-div">
+                    <p id="date">SAT | OCT 29 | 21:55 PM</p>
+                </div>
+                <p id="cityName">Get Output Here</p> <br>
+                <p class="temp"><span>0</span> <sup>o</sup> <span>C</span></p>
+                <p class="tempImg"><i class="fa-4x fa-solid fa-cloud" style="color : #C7C4BF"></i></p>
+            </div>
+        </section>
+        {{>footer}}
+    </div>
+</body>

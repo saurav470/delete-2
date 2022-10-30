@@ -1,6 +1,6 @@
 const express=require("express");
 const app=express();
-const path=require("path")
+const path=require("path");
 const hbs=require("hbs");
 const port=process.env.PORT||8000;
 //static path
@@ -18,17 +18,19 @@ hbs.registerPartials(partialPath);
 
 //routing
 app.get("/",(req,res)=>{
-    res.render("index" ,{
-        happy:"hgfjudhjklodfghiogiloudfioughbk"
-    })
+    res.status(200)
+    res.render("index")
 })
 app.get("/about",(req,res)=>{
+    res.status(200)
     res.render("about")
 })
 app.get("/weather",(req,res)=>{
-    res.send("weather")
+    res.status(200)
+    res.render("weather")
 })
 app.get("/*",(req,res)=>{
+    res.status(404)
     res.render("404")
 })
 
